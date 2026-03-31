@@ -1,0 +1,84 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f0f0f;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.counter {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.counter span {
+  color: #e53935;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(5, 80px);
+  gap: 12px;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+  transform 0.15s ease,
+  box-shadow 0.3s ease;
+}
+
+.box.blue {
+  background-color: #1a6cf5;
+  box-shadow: 0 4px 15px rgba(26, 108, 245, 0.3);
+}
+
+.box.blue:hover {
+  transform: scale(1.08);
+  background-color: #3a82f7;
+  box-shadow: 0 6px 20px rgba(26, 108, 245, 0.5);
+}
+
+.box.red {
+  background-color: #e53935;
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.4);
+}
+
+.box.red:hover {
+  transform: scale(1.05);
+  background-color: #ff5252;
+  box-shadow: 0 6px 20px rgba(229, 57, 53, 0.6);
+}
